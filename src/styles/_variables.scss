@@ -1,0 +1,42 @@
+:root {
+  /* Marca */
+  --color-brand: #5b3721;
+  --color-brand-dark: #3f2517;
+  --color-brand-light: #8b614a;
+
+  /* Fondos */
+  --color-background: #e6dbd5;
+  --color-surface: #faf7f5;
+  --color-surface-alt: #f2eae6;
+  --color-white: #ffffff;
+
+  /* Acentos */
+  --color-accent: #b98e78;
+  --color-accent-soft: #d8bcae;
+
+  /* Textos */
+  --color-text: #2f241f;
+  --color-text-muted: #75645b;
+  --color-border: #ded1ca;
+
+  /* Tipografías */
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  /* Tamaños */
+  --container-width: 1200px;
+  --header-height: 80px;
+
+  /* Bordes y sombras */
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 28px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 10px 35px rgb(63 37 23 / 10%);
+  --shadow-medium: 0 18px 50px rgb(63 37 23 / 16%);
+
+  /* Transiciones */
+  --transition-fast: 180ms ease;
+  --transition-normal: 300ms ease;
+}

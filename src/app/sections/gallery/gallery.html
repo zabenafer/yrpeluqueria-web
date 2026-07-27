@@ -1,0 +1,86 @@
+<section class="gallery section">
+  <div class="container">
+    <header class="gallery__header">
+      <div>
+        <span class="section-eyebrow">
+          Nuestros trabajos
+        </span>
+
+        <h2 class="gallery__title">
+          Resultados que reflejan tu estilo
+        </h2>
+      </div>
+
+      <p class="gallery__introduction">
+        Cada trabajo está pensado de manera personalizada, respetando la
+        identidad, el cabello y el resultado que busca cada clienta.
+      </p>
+    </header>
+
+    <div class="gallery__grid">
+      @for (item of galleryItems; track item.id) {
+        <article
+          class="gallery-card"
+          [class.gallery-card--featured]="item.featured"
+          [attr.data-tone]="item.tone"
+        >
+          <div class="gallery-card__media">
+            @if (item.image) {
+              <img
+                class="gallery-card__image"
+                [ngSrc]="item.image"
+                width="900"
+                height="1200"
+                [alt]="item.alt"
+              />
+            } @else {
+              <div class="gallery-card__placeholder">
+                <span class="gallery-card__monogram">
+                  YR
+                </span>
+
+                <span class="gallery-card__placeholder-text">
+                  Próximamente, trabajo real
+                </span>
+              </div>
+            }
+
+            <div class="gallery-card__overlay"></div>
+
+            <div class="gallery-card__content">
+              <span class="gallery-card__category">
+                {{ item.category }}
+              </span>
+
+              <h3 class="gallery-card__title">
+                {{ item.title }}
+              </h3>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="gallery__footer">
+      <div>
+        <p class="gallery__footer-title">
+          Conocé más trabajos de YR Peluquería
+        </p>
+
+        <p class="gallery__footer-description">
+          Seguinos en Instagram para ver colores, transformaciones y nuevos
+          resultados.
+        </p>
+      </div>
+
+      <a
+        class="button button--primary"
+        href="https://www.instagram.com/yuliresserpeluqeria/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver Instagram
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,225 @@
+:host {
+  display: block;
+}
+
+.about {
+  overflow: hidden;
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.about__visual {
+  position: relative;
+  min-height: 680px;
+}
+
+.about__image-frame {
+  position: absolute;
+  inset: 0 2.5rem 2rem 0;
+  overflow: hidden;
+  border-radius: 44% 44% var(--radius-large) var(--radius-large);
+  background: var(--color-background);
+  box-shadow: var(--shadow-medium);
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgb(255 255 255 / 60%),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #eaded8, #b98e78);
+  flex-direction: column;
+}
+
+.about__placeholder-monogram {
+  color: rgb(255 255 255 / 78%);
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 14vw, 10rem);
+  font-style: italic;
+  line-height: 1;
+  text-shadow: 0 15px 40px rgb(63 37 23 / 16%);
+}
+
+.about__placeholder-text {
+  margin-top: 1rem;
+  color: rgb(255 255 255 / 82%);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about__experience {
+  position: absolute;
+  right: 0;
+  bottom: 4rem;
+  z-index: 2;
+  display: grid;
+  min-width: 190px;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgb(91 55 33 / 10%);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-medium);
+}
+
+.about__experience-title {
+  color: var(--color-brand);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+}
+
+.about__experience-text {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.about__decoration {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgb(91 55 33 / 15%);
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgb(91 55 33 / 10%);
+    border-radius: 50%;
+    content: '';
+  }
+}
+
+.about__content {
+  max-width: 650px;
+
+  .section-eyebrow {
+    text-align: left;
+  }
+}
+
+.about__title {
+  margin-bottom: 1.5rem;
+}
+
+.about__lead {
+  margin-bottom: 1.25rem;
+  color: var(--color-brand);
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  line-height: 1.5;
+}
+
+.about__quote {
+  margin: 2rem 0;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 2px solid var(--color-accent);
+  color: var(--color-brand-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.about__values {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.about__value {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+
+  h3 {
+    margin-bottom: 0.25rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.about__value-number {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about__visual {
+    width: min(100%, 600px);
+    min-height: 650px;
+    margin-inline: auto;
+  }
+
+  .about__content {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__visual {
+    min-height: 520px;
+  }
+
+  .about__image-frame {
+    inset: 0 1rem 1rem 0;
+  }
+
+  .about__experience {
+    right: 0;
+    bottom: 2.5rem;
+    min-width: 165px;
+    padding: 1rem 1.2rem;
+  }
+
+  .about__decoration {
+    top: -1rem;
+    left: -1rem;
+    width: 120px;
+    height: 120px;
+  }
+
+  .about__content {
+    .button {
+      width: 100%;
+    }
+  }
+}

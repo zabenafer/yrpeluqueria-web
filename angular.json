@@ -33,13 +33,15 @@
               "src/styles.scss"
             ],
             "server": "src/main.server.ts",
-            "outputMode": "static",
+            "outputMode": "server",
             "security": {
               "allowedHosts": []
             },
             "ssr": {
-              "entry": "src/server.ts"
-            }
+              "entry": "src/server.ts",
+              "platform": "neutral"
+            },
+            "outputPath": "dist"
           },
           "configurations": {
             "production": {

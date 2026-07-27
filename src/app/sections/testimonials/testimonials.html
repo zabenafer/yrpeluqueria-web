@@ -1,0 +1,53 @@
+<section class="testimonials section">
+  <div class="container">
+    <header class="testimonials__header">
+      <span class="section-eyebrow">
+        Experiencias
+      </span>
+
+      <h2 class="section-title">
+        Lo que dicen nuestras clientas
+      </h2>
+
+      <p class="section-description">
+        Cada visita es una experiencia personalizada, pensada para que te
+        sientas cómoda, acompañada y feliz con el resultado.
+      </p>
+    </header>
+
+    <div class="testimonials__grid">
+      @for (testimonial of testimonials; track testimonial.id) {
+        <article class="testimonial-card">
+          <div class="testimonial-card__quote" aria-hidden="true">
+            “
+          </div>
+
+          <p class="testimonial-card__message">
+            {{ testimonial.message }}
+          </p>
+
+          <div class="testimonial-card__client">
+            <span class="testimonial-card__avatar" aria-hidden="true">
+              {{ testimonial.initials }}
+            </span>
+
+            <div>
+              <h3 class="testimonial-card__name">
+                {{ testimonial.name }}
+              </h3>
+
+              <span class="testimonial-card__service">
+                {{ testimonial.service }}
+              </span>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+    <p class="testimonials__note">
+      Testimonios de ejemplo. Próximamente agregaremos experiencias reales de
+      nuestras clientas.
+    </p>
+  </div>
+</section>

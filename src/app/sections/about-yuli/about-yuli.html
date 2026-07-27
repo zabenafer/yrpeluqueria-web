@@ -1,0 +1,111 @@
+<section class="about section section--soft">
+  <div class="container about__layout">
+    <div class="about__visual">
+      <div class="about__image-frame">
+        @if (image) {
+          <img
+            class="about__image"
+            [ngSrc]="image"
+            width="900"
+            height="1200"
+            alt="Yuliana Resser, creadora de YR Peluquería"
+          />
+        } @else {
+          <div class="about__placeholder">
+            <span class="about__placeholder-monogram">YR</span>
+
+            <span class="about__placeholder-text">
+              Espacio para una foto de Yuli
+            </span>
+          </div>
+        }
+      </div>
+
+      <div class="about__experience">
+        <span class="about__experience-title">Atención</span>
+        <span class="about__experience-text">
+          cercana y personalizada
+        </span>
+      </div>
+
+      <div class="about__decoration" aria-hidden="true"></div>
+    </div>
+
+    <div class="about__content">
+      <span class="section-eyebrow">
+        Sobre mí
+      </span>
+
+      <h2 class="about__title">
+        Hola, soy Yuli
+      </h2>
+
+      <p class="about__lead">
+        Soy Yuliana Resser, creadora de YR Peluquería, un espacio pensado para
+        acompañar a cada mujer desde la belleza, el cuidado y la atención
+        personalizada.
+      </p>
+
+      <p>
+        Mi trabajo comienza escuchando a cada clienta, entendiendo qué busca y
+        asesorándola para encontrar un resultado que se adapte a su cabello,
+        sus facciones y su estilo.
+      </p>
+
+      <p>
+        Me especializo principalmente en color, reflejos, babylights y
+        tratamientos capilares, cuidando cada detalle para conseguir resultados
+        delicados, luminosos y naturales.
+      </p>
+
+      <blockquote class="about__quote">
+        “Quiero que cada clienta se sienta cómoda, cuidada y feliz con su
+        resultado.”
+      </blockquote>
+
+      <div class="about__values">
+        <div class="about__value">
+          <span class="about__value-number">01</span>
+
+          <div>
+            <h3>Escuchar</h3>
+            <p>
+              Comprender qué buscás antes de comenzar cada servicio.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__value">
+          <span class="about__value-number">02</span>
+
+          <div>
+            <h3>Asesorar</h3>
+            <p>
+              Recomendar opciones acordes a tu cabello y estilo.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__value">
+          <span class="about__value-number">03</span>
+
+          <div>
+            <h3>Cuidar</h3>
+            <p>
+              Priorizar tanto el resultado como la salud del cabello.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <a
+        class="button button--primary"
+        href="https://wa.me/5493530000000?text=Hola%20Yuli,%20quisiera%20consultarte%20por%20un%20turno."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hablar con Yuli
+      </a>
+    </div>
+  </div>
+</section>

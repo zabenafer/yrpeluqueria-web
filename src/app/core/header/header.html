@@ -1,0 +1,92 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a
+      class="site-header__brand"
+      href="#inicio"
+      aria-label="Ir al inicio de YR Peluquería"
+      (click)="closeMenu()"
+    >
+      <span class="site-header__monogram">YR</span>
+
+      <span class="site-header__brand-name">
+        Peluquería
+      </span>
+    </a>
+
+    <button
+      class="site-header__toggle"
+      [class.site-header__toggle--open]="menuOpen()"
+      type="button"
+      aria-label="Abrir o cerrar menú de navegación"
+      aria-controls="main-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      id="main-navigation"
+      class="site-header__nav"
+      [class.site-header__nav--open]="menuOpen()"
+      aria-label="Navegación principal"
+    >
+      <a
+        class="site-header__link"
+        href="#inicio"
+        (click)="closeMenu()"
+      >
+        Inicio
+      </a>
+
+      <a
+        class="site-header__link"
+        href="#servicios"
+        (click)="closeMenu()"
+      >
+        Servicios
+      </a>
+
+      <a
+        class="site-header__link"
+        href="#tratamientos"
+        (click)="closeMenu()"
+      >
+        Tratamientos
+      </a>
+
+      <a
+        class="site-header__link"
+        href="#galeria"
+        (click)="closeMenu()"
+      >
+        Galería
+      </a>
+
+      <a
+        class="site-header__link"
+        href="#sobre-yuli"
+        (click)="closeMenu()"
+      >
+        Sobre mí
+      </a>
+
+      <a
+        class="site-header__link"
+        href="#contacto"
+        (click)="closeMenu()"
+      >
+        Contacto
+      </a>
+
+      <a
+        class="button button--secondary site-header__login"
+        href="https://app.yrpeluqueria.com/login"
+      >
+        Ingresar
+      </a>
+    </nav>
+  </div>
+</header>

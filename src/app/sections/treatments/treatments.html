@@ -1,0 +1,107 @@
+<section class="treatments section section--soft">
+  <div class="container">
+    <header class="treatments__header">
+      <span class="section-eyebrow">
+        Cuidado capilar
+      </span>
+
+      <h2 class="section-title">
+        Tratamientos para cuidar y renovar tu cabello
+      </h2>
+
+      <p class="section-description">
+        Evaluamos las necesidades de tu cabello para recomendarte una opción
+        personalizada que aporte nutrición, suavidad y vitalidad.
+      </p>
+    </header>
+
+    <div class="treatments__layout">
+      <aside class="treatments__presentation">
+        <span class="treatments__presentation-label">
+          Asesoramiento personalizado
+        </span>
+
+        <h3 class="treatments__presentation-title">
+          El cuidado también forma parte de un resultado hermoso
+        </h3>
+
+        <p class="treatments__presentation-text">
+          Cada cabello es diferente. Por eso, antes de realizar un tratamiento,
+          analizamos su estado y conversamos sobre el resultado que buscás.
+        </p>
+
+        <blockquote class="treatments__quote">
+          “Un cabello cuidado se siente, se ve y se disfruta.”
+        </blockquote>
+
+        <a
+          class="button button--light"
+          href="https://wa.me/5493530000000?text=Hola%20Yuli,%20quisiera%20consultar%20qué%20tratamiento%20es%20ideal%20para%20mi%20cabello."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Consultar mi tratamiento
+        </a>
+
+        <div
+          class="treatments__presentation-decoration"
+          aria-hidden="true"
+        ></div>
+      </aside>
+
+      <div class="treatments__list">
+        @for (treatment of treatments; track treatment.id) {
+          <article
+            class="treatment-card"
+            [class.treatment-card--featured]="treatment.featured"
+          >
+            <div class="treatment-card__heading">
+              <span class="treatment-card__number">
+                {{ treatment.number }}
+              </span>
+
+              @if (treatment.featured) {
+                <span class="treatment-card__badge">
+                  Recomendado
+                </span>
+              }
+            </div>
+
+            <div class="treatment-card__content">
+              <h3 class="treatment-card__title">
+                {{ treatment.title }}
+              </h3>
+
+              <p class="treatment-card__description">
+                {{ treatment.description }}
+              </p>
+
+              <ul
+                class="treatment-card__benefits"
+                [attr.aria-label]="'Beneficios de ' + treatment.title"
+              >
+                @for (benefit of treatment.benefits; track benefit) {
+                  <li>
+                    <span aria-hidden="true">✓</span>
+                    {{ benefit }}
+                  </li>
+                }
+              </ul>
+
+              <a
+                class="treatment-card__link"
+                href="https://wa.me/5493530000000?text=Hola%20Yuli,%20quisiera%20consultar%20por%20un%20tratamiento%20capilar."
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="'Consultar por ' + treatment.title"
+              >
+                Consultar por este tratamiento
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>
